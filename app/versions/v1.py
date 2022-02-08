@@ -8,7 +8,6 @@ from app.routers.hyperparameters.v1.api_view import router as hyperparameters_ro
 from app.routers.optimize_hyperparameters_task.v1.api_view import (
     router as optimize_hyperparameters_task_router,
 )
-from app.routers.predictor.v1.api_view import router as predictors_router
 from app.routers.trained_model.v1.api_view import router as trained_model_router
 from app.routers.trained_model_task.v1.api_view import router as train_model_task_router
 
@@ -23,7 +22,6 @@ app.include_router(forecast_router, prefix="/forecasts", tags=["forecasts"])
 app.include_router(
     hyperparameters_router, prefix="/hyperparameters", tags=["hyperparameters"]
 )
-app.include_router(predictors_router, prefix="/predictors", tags=["predictors"])
 app.include_router(
     optimize_hyperparameters_task_router,
     prefix="/optimize-hyperparameters-tasks",
@@ -33,5 +31,5 @@ app.include_router(
     trained_model_router, prefix="/trained-models", tags=["trained-models"]
 )
 app.include_router(
-    train_model_task_router, prefix="/train-model-tasks", tags=["train-model-tasks"]
+    train_model_task_router, prefix="/train-model-tasks", tags=["train-model-tasks"],
 )

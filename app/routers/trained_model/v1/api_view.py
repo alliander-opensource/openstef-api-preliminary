@@ -14,6 +14,7 @@ from fastapi import (
     Query,
     Response,
     status,
+    Body,
 )
 from openstef.model.serializer import MODEL_ID_SEP
 from starlette.requests import Request

@@ -1,25 +1,20 @@
 from contextlib import contextmanager
 
 from sqlalchemy import create_engine, inspect
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-from app.core.settings import Settings
 
-# dialect+driver://username:password@host:port/database
-DATABASE_URL = "mysql+{driver}://{user}:{password}@{host}:{port}/{database}".format(
-    driver="mysqlconnector",
-    user=Settings.mysql_username,
-    host=Settings.mysql_host,
-    port=Settings.mysql_port,
-    password=Settings.mysql_password.get_secret_value(),
-    database=Settings.mysql_database,
-)
+sqlite_filepath = 'task_repository.db'
+engine = create_engine(f"sqlite:///{sqlite_filepath}")
 
-engine = create_engine(DATABASE_URL)
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
+
+## setup the correct table
+# train_model_tasks(id, training_done, created, duration, trained_model_id, training_failed, reason_failed,
+#                   new_model_better)
 
 
 def db_model_as_dict(obj):

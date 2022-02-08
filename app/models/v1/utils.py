@@ -12,7 +12,6 @@ from app.routers.forecast.v1.api_models import (
     ForecastRequestModel,
     ForecastResponseModel,
 )
-from app.routers.predictor.v1.api_models import PredictorsResponseModel
 
 
 def input_data_model_to_input_data_df(input_data: InputdataModel):
@@ -101,19 +100,6 @@ def forecast_model_dict_to_forecast_df(forecast: ForecastResponseModel) -> pd.Da
         data[column_name] = quantile["value"]
 
     return pd.DataFrame(index=index, data=data)
-
-
-def predictors_df_to_predictors_model(
-    predictors: pd.DataFrame,
-) -> PredictorsResponseModel:
-    # NOTE need to replace NaN's since NaN's are not JSON serializable
-    predictors = predictors.replace({float("nan"): None})
-    predictors_dict = predictors.to_dict(orient="split")
-    return PredictorsResponseModel(
-        index=predictors_dict["index"],
-        columns=predictors_dict["columns"],
-        data=predictors_dict["data"],
-    )
 
 
 def generate_uuid():
