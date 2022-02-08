@@ -13,7 +13,8 @@ from starlette.responses import RedirectResponse
 
 from app.core.initializers import cors, headers, monitoring, mounting
 from app.core.settings import Settings
-from app.database import engine
+from app.database import engine, Base
+from app.models.v1.db_models import TrainModelTask, OptimizeHyperparametersTask
 
 logger = structlog.get_logger(__name__)
 
@@ -23,6 +24,9 @@ app = FastAPI(
     description=Settings.app_description,
     version=Settings.app_version,
 )
+
+### Create empty tables if not present
+Base.metadata.create_all(engine)
 
 # ==================================================================
 # SETUP major API versions
