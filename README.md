@@ -1,5 +1,5 @@
 # openstef-api-preliminary
-preliminary implementation of an fastapi wrapper around (OpenSTEF)[www.github.com/openstef/openstef]
+preliminary implementation of an fastapi wrapper around ![OpenSTEF](https://www.github.com/openstef/openstef)
 
 
 ## Installation
