@@ -1,5 +1,5 @@
 # openstef-api-preliminary
-preliminary implementation of an fastapi wrapper around openstef
+preliminary implementation of an fastapi wrapper around (OpenSTEF)[www.github.com/openstef/openstef]
 
 
 ## Installation
@@ -32,6 +32,10 @@ preliminary implementation of an fastapi wrapper around openstef
     cd <your_repo>
     pytest
     ```
+    
+### TODO
+- Make project REUSE compliant
+- Add unit and system tests
 
 ## Template structure
 
