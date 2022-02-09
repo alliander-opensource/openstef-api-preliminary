@@ -1,6 +1,7 @@
-# openstef-api-preliminary
-preliminary implementation of an fastapi wrapper around [OpenSTEF](https://www.github.com/openstef/openstef)
-
+OpenSTEF API - Preliminary
+==================================================
+This project exposes the functionality of the openstef package through an FASTApi based API.
+This repo is very much a Work in Progress, and currently released for Sogno
 
 ## Installation
 1. Make a virtual environment for this repository:
@@ -13,6 +14,7 @@ preliminary implementation of an fastapi wrapper around [OpenSTEF](https://www.g
     ```bash
     pip install -r requirements.txt
     ```
+
 ## Usage
 
 1. Run the app locally, then open your browser at: http://127.0.0.1:8000.
@@ -24,7 +26,8 @@ preliminary implementation of an fastapi wrapper around [OpenSTEF](https://www.g
 
 ### Unit testing
 
-1. Install the test dependencies:
+
+1. Install the test dependencies -if applicable-:
     ```bash
     pip install -r test-requirements.txt
 2. Run the unit tests locally:
@@ -32,7 +35,7 @@ preliminary implementation of an fastapi wrapper around [OpenSTEF](https://www.g
     cd <your_repo>
     pytest
     ```
-    
+
 ### TODO
 - Make project REUSE compliant
 - Add unit and system tests

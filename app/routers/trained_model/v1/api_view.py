@@ -84,7 +84,7 @@ async def train_model(
     background_tasks: BackgroundTasks,
 ):
     """Train a model.
-
+    For an input example, see data/*train_model_input*.json
     Returns:
         TrainedModelTrainResponseModel.
     """
@@ -149,7 +149,11 @@ async def find_trained_models(
         description="Sorting order. Ascending is False will return the newest model(s) first.",
     ),
 ) -> StreamingResponse:
-    """Get trained models"""
+    """NOT IMPLEMENTED YET!
+    Controller has nog function 'find_trained_model_paths yet
+
+    Get trained models"""
+
 
     paths = controller.find_trained_model_paths(
         prediction_job_id=prediction_job_id, limit=limit, ascending=ascending
