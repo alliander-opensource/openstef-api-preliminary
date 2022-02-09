@@ -21,6 +21,7 @@ logger = structlog.get_logger(__name__)
 @router.post("/generate", response_model=ForecastResponseModel)
 async def generate_forecast(forecast_request: ForecastRequestModel):
     """Generate a forecast.
+    For an input example, see data/*generate_forecast_input*.json
 
     Returns:
         ForecastResponseModel.
