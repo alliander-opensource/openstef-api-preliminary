@@ -1,6 +1,6 @@
 import uuid
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Body
 from starlette.requests import Request
 
 from app.routers.trained_model_task.v1.api_models import TrainModelTaskReponseModel
@@ -9,7 +9,6 @@ from app.routers.trained_model_task.v1.controller import TrainModelTaskControlle
 router = APIRouter()
 
 controller = TrainModelTaskController()
-
 
 @router.get(
     "/{uuid}",
