@@ -5,7 +5,6 @@ This project exposes the functionality of the openstef package through an FASTAp
 This repo is very much a Work in Progress, and currently released for Sogno
 
 ## Installation
-
 1. Make a virtual environment for this repository:
     ```bash
     cd <your_repo>
@@ -67,7 +66,7 @@ app
 |
 ├── app_settings.py                     (APP and API settings)
 └── main.py                             (Main entry point to initialize and start the app)
-<<<<<<< HEAD
+
 ```
 
 # License
