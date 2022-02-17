@@ -1,3 +1,6 @@
+** Archived!: see github.com/alliander-opensource/openstef-api for the new repo
+
+
 ==========
 OpenSTEF API - Preliminary
 ==================================================
